@@ -1,12 +1,3 @@
-# Astro Idol pro version
-
-
-The premium version of the popular Astro idol starter template, crafted for micro SaaS startups. Built with Astro and styled with Skeleton CSS.
-
-![basics](./src/demo/ai-pro-thumbnail.png)
-
-
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -23,7 +14,7 @@ Inside of your Astro project, you'll see the following folders and files:
         └── Header.astro
         └── Hero.astro
         └── PriceTable.astro
-        └── SeenoN.astro
+        └── SeenOn.astro
         └── Showcase.astro
         └── Testimony.astro
 │   ├── layouts/
@@ -44,14 +35,10 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
+| Command         | Action                                      |
+| :-------------- | :------------------------------------------ |
+| `npm install`   | Installs dependencies                       |
+| `npm run dev`   | Starts local dev server at `localhost:4321` |
+| `npm run build` | Build your production site to `./dist/`     |
+
 |
-
-
-## 👀 Curious to Explore More?
-
-Check out [LAB-CH3](https://github.com/LaB-CH3) for a growing collection of current and future templates.
