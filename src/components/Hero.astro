@@ -1,8 +1,8 @@
 ---
-const checklist = ["Free version", "Self-hosting", "No extentive cost"];
+const checklist = ["Free Trial", "0 delay updates", "No extentive cost"];
 import g2 from "../images/brands/g2.svg";
 import props from "../utils";
-import heroImage from "../images/hero.svg";
+import heroImage from "../images/image.png";
 ---
 
 <section id="hero">
@@ -17,8 +17,10 @@ import heroImage from "../images/hero.svg";
           </p>
         </div>
         <div class="flex-center gap-1">
-          <a class="button button-primary" href={props.buy_link} target="_blank"
-            >{props.title}</a
+          <a
+            class="button button-primary"
+            href={props.free_link}
+            target="_blank">{props.title}</a
           >
         </div>
         <ul class="gap-1 mt-2 flex-center grid-center hero-checklist">
