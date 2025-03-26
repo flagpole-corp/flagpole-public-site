@@ -1,0 +1,154 @@
+---
+const faqs = [
+  {
+    question: "What's included in each plan?",
+    answer: `
+      <ul>
+        <li><strong>Trial (30 days)</strong>: 10 projects, 100 flags per project, percentage rollouts</li>
+        <li><strong>IC Plan</strong>: 1 project, 10 flags (ideal for solo developers)</li>
+        <li><strong>PRO</strong>: 50 projects, 500 flags per project with user & geo targeting</li>
+        <li><strong>Enterprise</strong>: 200 projects, 1000 flags per project with full targeting (time-based, device, custom rules)</li>
+      </ul>
+    `,
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Start with our 30-day free trial (no credit card needed) to test all features. After trial, choose the plan that fits your needs.",
+  },
+  {
+    question: "What targeting options are available in each plan?",
+    answer: `
+      <ul>
+        <li><strong>Trial/IC</strong>: Percentage rollouts</li>
+        <li><strong>PRO</strong>: User targeting + geo location</li>
+        <li><strong>Enterprise</strong>: Full suite (time-based, device, custom attributes)</li>
+      </ul>
+      All plans support our React, Python, and Angular SDKs.
+    `,
+  },
+  {
+    question: "Can I upgrade or downgrade my plan?",
+    answer:
+      "Yes! You can change plans anytime. Your existing flags will automatically adjust to the new plan's limits.",
+  },
+  {
+    question: "What happens when I exceed my plan limits?",
+    answer:
+      "We'll notify you when approaching limits. Your existing flags will continue working, but you'll need to upgrade to create new ones.",
+  },
+  {
+    question: "Is there a money-back guarantee?",
+    answer: "Yes! We offer a 30-day money-back guarantee on all paid plans.",
+  },
+];
+---
+
+<section id="resources">
+  <div class="container">
+    <div class="max-w-md m-auto text-center">
+      <h1 class="text-lg">Frequently Asked Questions</h1>
+      <p class="text-sm">
+        Ship features faster while keeping production stable
+      </p>
+    </div>
+    <div class="faq-list max-w-lg m-auto">
+      {
+        faqs.map((faq, index) => (
+          <div
+            class="faq-item"
+            x-data="{ expanded: false }"
+            x-on:click="expanded = !expanded"
+          >
+            <div class="question flex">
+              <h3 class="text-md">{faq.question}</h3>
+
+              <div class="collapse-icon">
+                <svg
+                  x-show="!expanded"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="40"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <svg
+                  x-show="expanded"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="answer" x-bind:class="expanded ? 'x-hidden' : ''">
+              <p class="text-sm" set:html={faq.answer}></p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-top: 150px;
+  }
+  .faq-list {
+    padding: 50px 0;
+  }
+  .faq-item {
+    border-bottom: var(--border);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    padding: 40px 0;
+  }
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .answer {
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .question {
+    position: relative;
+  }
+  .collapse-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .collapse-icon svg {
+    width: 30px;
+  }
+  .x-hidden {
+    max-height: 100px;
+  }
+  .faq-item h3 {
+    font-weight: 500;
+    margin-bottom: 0px;
+  }
+  .faq-item p {
+    transform: translateY(15px);
+  }
+
+  .question,
+  .answer {
+    transition: all 0.3s ease;
+  }
+</style>

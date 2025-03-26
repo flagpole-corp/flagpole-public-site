@@ -1,0 +1,61 @@
+---
+import utils from "../utils";
+---
+
+<section>
+  <div class="container">
+    <div class="max-w-md m-auto">
+      <div class="footer-hero">
+        <h2 class="text-xlg">Ready for calmer, more productive deployments?</h2>
+        <p class="text-md">Try FlagPole today. It's free to get started.</p>
+        <a href={utils.free_link} target="_blank" class="button button-primary"
+          >{utils.title}</a
+        >
+      </div>
+    </div>
+    <div class="footer-footer mt-2">
+      <div class="flex gap-1 footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://docs.useflagpole.dev">Help</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--offwhite);
+    padding: 80px 10px 30px 10px;
+    text-align: center;
+  }
+
+  .footer-footer {
+    padding-top: 50px;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-links a,
+  .use-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    height: 22px;
+  }
+
+  .footer-footer a:hover,
+  .use-link:hover {
+    border-color: var(--accent);
+  }
+
+  @media (max-width: 700px) {
+    .footer-footer {
+      grid-template-columns: 100%;
+    }
+    .footer-links {
+      justify-content: center;
+    }
+  }
+</style>
