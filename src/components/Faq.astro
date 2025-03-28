@@ -93,7 +93,7 @@ const faqs = [
               </div>
             </div>
             <div class="answer" x-bind:class="expanded ? 'x-hidden' : ''">
-              <p class="text-sm" set:html={faq.answer}></p>
+              <p class="text-sm" set:html={faq.answer} />
             </div>
           </div>
         ))
@@ -114,7 +114,7 @@ const faqs = [
     cursor: pointer;
     user-select: none;
     transition: all 0.3s ease;
-    padding: 40px 0;
+    padding: 20px 0;
   }
   .faq-item:last-child {
     border-bottom: none;
@@ -137,7 +137,7 @@ const faqs = [
     width: 30px;
   }
   .x-hidden {
-    max-height: 100px;
+    max-height: 180px;
   }
   .faq-item h3 {
     font-weight: 500;
