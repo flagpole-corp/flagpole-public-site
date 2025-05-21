@@ -1,35 +1,41 @@
 ---
+import utils from "../utils";
+
 const prices = [
   {
     title: "Free",
     price: "0",
-    description: "Get started with essential features tailored for hobbyists.",
+    description:
+      "Get started with essential features tailored for hobbyists and strong individual contributors.",
     features: [
-      "Unlimited applications",
-      "10 Collaborator seats",
-      "Unlimited external Users",
-      "Record permissions",
-      "Community support",
+      "1 Team member",
+      "1 Project",
+      "50 Feature Flags",
+      "Percentage rollout",
+      "Basic support",
+      "Help center access",
     ],
   },
   {
     title: "Starter",
     price: "9.99",
     description:
-      "Begin with key designed specifically for individuals and small business needs.",
+      "Begin with key designed specifically for small business and growing teams needs.",
     features: [
-      "Custom Scripts",
-      "Custom Domain",
-      "Custom Apps",
-      "Priority Support",
-      "Success Manager",
+      "50 Team members",
+      "50 Projects",
+      "500 flags per project",
+      "User targeting",
+      "Percentage rollout",
+      "Location-based targeting",
+      "Priority email support",
+      "Help center access",
     ],
   },
   {
     title: "Pro",
     price: "19.99",
-    description:
-      "Start using core features for the needs of individuals and smaller businesses.",
+    description: "For larger teams with premium needs",
     features: [
       "Enterprise SSO",
       "Additional Data Connectors",
@@ -76,7 +82,7 @@ const prices = [
                 </li>
               ))}
             </ul>
-            <a href="#" class="button w-full">
+            <a href={utils.free_link} target="_blank" class="button w-full">
               Get Started for Free
             </a>
           </div>
